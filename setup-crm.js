@@ -198,6 +198,24 @@ const COMPANY_FIELDS = [
   { name: 'wholesalerRelationshipRating', label: 'Wholesaler Relationship Rating', type: 'SELECT', icon: 'IconStar',
     description: 'Quality of relationship with this wholesaler',
     options: makeOptions(['Excellent', 'Good', 'Developing', 'New', 'Difficult']) },
+  { name: 'rtm', label: 'RTM', type: 'SELECT', icon: 'IconTruck',
+    description: 'Route to Market — which wholesaler fulfils orders for this customer. Select Other and use RTM Other field for unlisted wholesalers.',
+    options: [
+      { label: 'Chapple & Jenkins', value: 'CHAPPLE_JENKINS', color: 'green', position: 0 },
+      { label: 'Hunts', value: 'HUNTS', color: 'turquoise', position: 1 },
+      { label: 'Classic Fine Foods', value: 'CLASSIC_FINE_FOODS', color: 'sky', position: 2 },
+      { label: 'JDs', value: 'JDS', color: 'blue', position: 3 },
+      { label: 'Mr Lemonade', value: 'MR_LEMONADE', color: 'purple', position: 4 },
+      { label: 'DDC', value: 'DDC', color: 'pink', position: 5 },
+      { label: 'CH & CO', value: 'CH_CO', color: 'red', position: 6 },
+      { label: 'The Estate Dairy', value: 'THE_ESTATE_DAIRY', color: 'orange', position: 7 },
+      { label: 'Bidfood', value: 'BIDFOOD', color: 'yellow', position: 8 },
+      { label: 'Reynolds', value: 'REYNOLDS', color: 'gray', position: 9 },
+      { label: 'CLF', value: 'CLF', color: 'green', position: 10 },
+      { label: 'Other', value: 'OTHER', color: 'gray', position: 11 },
+    ] },
+  { name: 'rtmOther', label: 'RTM Other', type: 'TEXT', icon: 'IconEdit',
+    description: 'If RTM is set to Other, specify the wholesaler name here. Once confirmed as permanent, add it to the RTM dropdown via Settings → Data Model.' },
 ];
 
 const OPPORTUNITY_FIELDS = [
